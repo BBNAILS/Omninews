@@ -1,0 +1,166 @@
+/* Reset styles and basic styling */
+body, h1, h2, h3, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(135deg, #0f4c81,  #d1e282, #ebaedd); /* Gradient background with blue tones */
+    background-size: 600% 600%; /* Increase the size of the gradient */
+    animation: gradientAnimation 30s ease infinite alternate; /* Animation for gradient transition */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 10% 50%; } /* Initial position of the gradient */
+    100% { background-position: 100% 50%; } /* Final position of the gradient */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px; /* Adjust height as needed */
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ffc107;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Search container styles */
+.search-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#searchInput {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    width: 150px;
+}
+
+#searchBtn {
+    background-color: #ffc107;
+    color: #333;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#searchBtn:hover {
+    background-color: #ffdb70;
+}
+
+/* News container styles */
+#newsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.news-story {
+    width: calc(50% - 10px); /* Adjust based on image size and gap */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.news-story img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+}
+
+.news-overlay .category-label {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+    padding: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.news-overlay h2 {
+    color: #fff;
+    font-size: 1.5em;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+.news-story:hover {
+    transform: translateY(-5px);
+}
+
+/* News container styles */
+#newsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Change to 'flex-start' to reduce space */
+    gap: 20px; /* Adjust as needed to reduce spacing */
+}
+
+.news-story {
+    width: calc(50% - 10px); /* Adjust based on image size and gap */
+}
+
+/* For smaller news stories */
+.news-story.smaller {
+    width: calc(25% - 10px); /* Adjust based on image size and gap */
+}
